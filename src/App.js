@@ -4,9 +4,10 @@ import "./App.css";
 // import { MyCom1, MyCom2 } from "./pages/react入门/components";
 // import Clock from "./pages/react入门/clock";
 // import StateTest from "./pages/react入门/stateTest";
-import CartSample from "./pages/react入门/cartSample";
-import MyCar from "./pages/react入门/myCar";
+// import CartSample from "./pages/react入门/cartSample";
+// import MyCar from "./pages/react入门/myCar";
 // import AntdTest from "./pages/组件化1/antdTest";
+import Hoc from "./pages/组件化1/Hoc";
 
 // function App() {
 //   return (
@@ -50,11 +51,14 @@ class App extends React.Component {
         {/* <StateTest /> */}
 
         {/* 条件渲染 */}
-        <CartSample />
-        <MyCar title="我的testCar" />
+        {/* <CartSample /> */}
+        {/* <MyCar title="我的testCar" /> */}
 
         {/* antddesi */}
         {/* <AntdTest /> */}
+
+        {/* 高阶组件 */}
+        <Hoc />
       </div>
     );
   }
