@@ -8,6 +8,7 @@ import "./App.css";
 // import MyCar from "./pages/react入门/myCar";
 // import AntdTest from "./pages/组件化1/antdTest";
 import Hoc from "./pages/组件化1/Hoc";
+import WelcomeDialog from "./pages/组件化1/WelcomeDialog";
 
 // function App() {
 //   return (
@@ -59,6 +60,9 @@ class App extends React.Component {
 
         {/* 高阶组件 */}
         <Hoc />
+
+        {/* react插槽 */}
+        <WelcomeDialog />
       </div>
     );
   }
