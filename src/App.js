@@ -9,6 +9,7 @@ import "./App.css";
 // import AntdTest from "./pages/组件化1/antdTest";
 import Hoc from "./pages/组件化1/Hoc";
 import WelcomeDialog from "./pages/组件化1/WelcomeDialog";
+import HookTest from "./pages/组件化1/HookTest";
 
 // function App() {
 //   return (
@@ -63,6 +64,9 @@ class App extends React.Component {
 
         {/* react插槽 */}
         <WelcomeDialog />
+
+        {/* Hook */}
+        <HookTest />
       </div>
     );
   }
