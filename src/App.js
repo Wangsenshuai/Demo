@@ -7,9 +7,10 @@ import "./App.css";
 // import CartSample from "./pages/react入门/cartSample";
 // import MyCar from "./pages/react入门/myCar";
 // import AntdTest from "./pages/组件化1/antdTest";
-import Hoc from "./pages/组件化1/Hoc";
-import WelcomeDialog from "./pages/组件化1/WelcomeDialog";
-import HookTest from "./pages/组件化1/HookTest";
+// import Hoc from "./pages/组件化1/Hoc";
+// import WelcomeDialog from "./pages/组件化1/WelcomeDialog";
+// import HookTest from "./pages/组件化1/HookTest";
+import ContextTest from "./pages/组件化1/ContextTest";
 
 // function App() {
 //   return (
@@ -60,13 +61,16 @@ class App extends React.Component {
         {/* <AntdTest /> */}
 
         {/* 高阶组件 */}
-        <Hoc />
+        {/* <Hoc /> */}
 
         {/* react插槽 */}
-        <WelcomeDialog />
+        {/* <WelcomeDialog /> */}
 
         {/* Hook */}
-        <HookTest />
+        {/* <HookTest /> */}
+
+        {/* context组件通信 */}
+        <ContextTest />
       </div>
     );
   }
