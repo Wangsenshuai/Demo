@@ -10,7 +10,8 @@ import "./App.css";
 // import Hoc from "./pages/组件化1/Hoc";
 // import WelcomeDialog from "./pages/组件化1/WelcomeDialog";
 // import HookTest from "./pages/组件化1/HookTest";
-import ContextTest from "./pages/组件化1/ContextTest";
+// import ContextTest from "./pages/组件化1/ContextTest";
+import KForm from "./pages/组件化1/KForm";
 
 // function App() {
 //   return (
@@ -70,7 +71,11 @@ class App extends React.Component {
         {/* <HookTest /> */}
 
         {/* context组件通信 */}
-        <ContextTest />
+        {/* <ContextTest /> */}
+
+        {/* antd表单 */}
+        {/* <AntdForm /> */}
+        <KForm />
       </div>
     );
   }
