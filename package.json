@@ -15,7 +15,8 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "prod": "node server/main.js  >> server_log"
   },
   "eslintConfig": {
     "extends": "react-app"
