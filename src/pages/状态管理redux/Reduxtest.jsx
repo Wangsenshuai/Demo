@@ -9,6 +9,12 @@ const mapStateToProps = state => ({ num: state });
 const mapDispatchToProps = {
   add: () => ({ type: "add" }),
   minus: () => ({ type: "minus" }),
+  //异步操作
+  asyncAdd: () => dispatch => {
+    setTimeout(() => {
+      dispatch({ type: "add" });
+    }, 1500);
+  },
 };
 
 //直接使用redux
@@ -50,7 +56,7 @@ const mapDispatchToProps = {
 )
 class Reduxtest extends Component {
   render() {
-    const { num, add, minus } = this.props;
+    const { num, add, minus, asyncAdd } = this.props;
     return (
       <div>
         {/* 取值 */}
@@ -58,6 +64,7 @@ class Reduxtest extends Component {
         <div>
           <button onClick={minus}>减少</button>
           <button onClick={add}>增加</button>
+          <button onClick={asyncAdd}>异步增加</button>
         </div>
       </div>
     );
