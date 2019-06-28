@@ -11,8 +11,11 @@ import "./App.css";
 // import WelcomeDialog from "./pages/组件化1/WelcomeDialog";
 // import HookTest from "./pages/组件化1/HookTest";
 // import ContextTest from "./pages/组件化1/ContextTest";
-import KForm from "./pages/组件化1/KForm";
+// import KForm from "./pages/组件化1/KForm";
+import Reduxtest from "./pages/状态管理redux/Reduxtest";
 
+import store from "./store";
+import { Provider } from "react-redux";
 // function App() {
 //   return (
 //     <div className="App">
@@ -75,7 +78,12 @@ class App extends React.Component {
 
         {/* antd表单 */}
         {/* <AntdForm /> */}
-        <KForm />
+        {/* <KForm /> */}
+
+        {/*redux  provider起始就是上下文*/}
+        <Provider store={store}>
+          <Reduxtest />
+        </Provider>
       </div>
     );
   }
