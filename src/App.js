@@ -12,10 +12,11 @@ import "./App.css";
 // import HookTest from "./pages/组件化1/HookTest";
 // import ContextTest from "./pages/组件化1/ContextTest";
 // import KForm from "./pages/组件化1/KForm";
-import Reduxtest from "./pages/状态管理redux/Reduxtest";
+// import Reduxtest from "./pages/状态管理redux/Reduxtest";
 
 import store from "./store";
 import { Provider } from "react-redux";
+import Routersample from "./pages/react-router-dom/Routersample";
 // function App() {
 //   return (
 //     <div className="App">
@@ -46,7 +47,7 @@ class App extends React.Component {
     const user = { name: "wss", age: "24" };
     return (
       <div>
-        <p>{defaultInfo(user)}</p>
+        {/* <p>{defaultInfo(user)}</p> */}
         {/* 组件初试 */}
         {/* <MyCom1 name="wx" /> */}
         {/* <MyCom2 name="wss" /> */}
@@ -81,8 +82,13 @@ class App extends React.Component {
         {/* <KForm /> */}
 
         {/*redux  provider起始就是上下文*/}
-        <Provider store={store}>
+        {/* <Provider store={store}>
           <Reduxtest />
+        </Provider> */}
+
+        {/* react-router */}
+        <Provider store={store}>
+          <Routersample />
         </Provider>
       </div>
     );

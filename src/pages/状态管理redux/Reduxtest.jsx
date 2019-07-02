@@ -36,6 +36,13 @@ const mapDispatchToProps = {
 // }
 
 //1.使用react-redux  函数写法
+//用connect高阶组件强化Reduxtest
+//connect本身是构造函数，第一个()传入配置,这样Reduxtest就可以使用解构的相关方法
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Reduxtest);
+
 // function Reduxtest({ num, add, minus }) {
 //   return (
 //     <div>
@@ -71,9 +78,3 @@ class Reduxtest extends Component {
   }
 }
 export default Reduxtest;
-//用connect高阶组件强化Reduxtest
-//connect本身是构造函数，第一个()传入配置,这样Reduxtest就可以使用解构的相关方法
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(Reduxtest);
