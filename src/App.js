@@ -45,6 +45,35 @@ import Routersample from "./pages/react-router-dom/Routersample";
 //   return user.name + " " + user.age;
 // }
 
+const routeCom = [
+  "Clock",
+  "StateTest",
+  "CartSample",
+  "MyCar",
+  "AntdTest",
+  "Hoc",
+  "WelcomeDialog",
+  "HookTest",
+  "ContextTest",
+  "KForm",
+  "Reduxtest",
+  "Routersample",
+];
+const routeComp = [
+  Clock,
+  StateTest,
+  CartSample,
+  MyCar,
+  AntdTest,
+  Hoc,
+  WelcomeDialog,
+  HookTest,
+  ContextTest,
+  KForm,
+  Reduxtest,
+  Routersample,
+];
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -65,141 +94,31 @@ class App extends React.Component {
           <Provider store={store}>
             <BrowserRouter>
               <div className="router-group">
-                <Link
-                  to="/"
-                  className={
-                    this.state.clickRoute === "Clock"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  Clock
-                </Link>
-                <Link
-                  to="/StateTest"
-                  className={
-                    this.state.clickRoute === "StateTest"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  StateTest
-                </Link>
-                <Link
-                  to="/CartSample"
-                  className={
-                    this.state.clickRoute === "CartSample"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  CartSample
-                </Link>
-                <Link
-                  to="/MyCar"
-                  className={
-                    this.state.clickRoute === "MyCar"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  MyCar
-                </Link>
-                <Link
-                  to="/AntdTest"
-                  className={
-                    this.state.clickRoute === "AntdTest"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  AntdTest
-                </Link>
-                <Link
-                  to="/Hoc"
-                  className={
-                    this.state.clickRoute === "Hoc"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  Hoc
-                </Link>
-                <Link
-                  to="/WelcomeDialog"
-                  className={
-                    this.state.clickRoute === "WelcomeDialog"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  WelcomeDialog
-                </Link>
-                <Link
-                  to="/HookTest"
-                  className={
-                    this.state.clickRoute === "HookTest"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  HookTest
-                </Link>
-                <Link
-                  to="/ContextTest"
-                  className={
-                    this.state.clickRoute === "ContextTest"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  ContextTest
-                </Link>
-                <Link
-                  to="/KForm"
-                  className={
-                    this.state.clickRoute === "KForm"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  KForm
-                </Link>
-                <Link
-                  to="/Reduxtest"
-                  className={
-                    this.state.clickRoute === "Reduxtest"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  Reduxtest
-                </Link>
-                <Link
-                  to="/Routersample"
-                  className={
-                    this.state.clickRoute === "Routersample"
-                      ? "route-click"
-                      : "route-no-click"
-                  }
-                  onClick={this.click2Route}
-                >
-                  Routersample
-                </Link>
+                {routeCom.map(e => (
+                  <Link
+                    to={"/" + e}
+                    className={
+                      this.state.clickRoute === e
+                        ? "route-click"
+                        : "route-no-click"
+                    }
+                    key={e}
+                    onClick={this.click2Route}
+                  >
+                    {e}
+                  </Link>
+                ))}
               </div>
               <Switch>
-                <Route exact path="/" component={Clock} />
+                {routeCom.map((e, index) => (
+                  <Route
+                    exact
+                    path={"/" + e}
+                    component={routeComp[index]}
+                    key={e}
+                  />
+                ))}
+                {/* <Route exact path="/" component={Clock} />
                 <Route exact path="/StateTest" component={StateTest} />
                 <Route exact path="/CartSample" component={CartSample} />
                 <Route exact path="/MyCar" component={MyCar} />
@@ -210,7 +129,7 @@ class App extends React.Component {
                 <Route exact path="/ContextTest" component={ContextTest} />
                 <Route exact path="/KForm" component={KForm} />
                 <Route exact path="/Reduxtest" component={Reduxtest} />
-                <Route exact path="/Routersample" component={Routersample} />
+                <Route exact path="/Routersample" component={Routersample} /> */}
               </Switch>
             </BrowserRouter>
           </Provider>
