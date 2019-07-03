@@ -5,7 +5,7 @@ import React, { Component } from "react";
 //使用react-redux
 import { connect } from "react-redux";
 //mapStateToProps是自己定义的名字
-const mapStateToProps = state => ({ num: state });
+const mapStateToProps = state => ({ num: state.counter });
 const mapDispatchToProps = {
   add: () => ({ type: "add" }),
   minus: () => ({ type: "minus" }),
