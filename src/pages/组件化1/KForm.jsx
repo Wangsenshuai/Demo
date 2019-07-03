@@ -41,6 +41,8 @@ function KFormCreat(Comp) {
         this.setState({ [field + "Message"]: "" });
         //校验返回成功，在全部校验中用得到
         return true;
+      } else {
+        return false;
       }
     };
 

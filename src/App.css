@@ -31,3 +31,44 @@
     transform: rotate(360deg);
   }
 }
+
+.app-wrapper {
+  padding: 20px;
+  background-color: rgba(246, 247, 249, 1);
+  height: 100vh;
+}
+.app-inner {
+  background-color: white;
+  height: calc(100vh - 40px);
+  width: calc(100% - 200px);
+  overflow: auto;
+}
+
+.router-group {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: white;
+  border: solid 1px;
+}
+
+.route-click {
+  display: block;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  background: rgba(24, 144, 255, 1);
+  border-radius: 10px;
+  padding: 6px;
+  color: rgba(70, 76, 91, 1);
+}
+.route-no-click {
+  display: block;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  padding: 6px;
+  /* background-color: white; */
+  border-radius: 4px;
+  color: rgba(70, 76, 91, 1);
+}
