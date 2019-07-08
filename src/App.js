@@ -2,7 +2,7 @@ import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 //导入路由相关组件
-import { BrowserRouter, Link, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
 // import { MyCom1, MyCom2 } from "./pages/react入门/components";
 import Clock from "./pages/react入门/clock";
@@ -75,9 +75,6 @@ const routeComp = [
 ];
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     clickRoute: "Clock",
   };

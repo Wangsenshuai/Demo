@@ -33,6 +33,7 @@ function KFormCreat(Comp) {
             return true;
           }
         }
+        return false;
       });
       console.log("单项", ret);
 
