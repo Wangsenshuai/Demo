@@ -1,0 +1,31 @@
+stages:
+  - setup
+  - validate
+
+cache:
+  paths:
+    - node_modules/
+
+init:
+  stage: setup
+  tags:
+    - fe
+    - xdev
+  script:
+    - npm install
+
+lint:
+  stage: validate
+  tags:
+    - fe
+    - xdev
+  script:
+    - npm run lint
+
+test-build:
+  stage: validate
+  tags:
+    - fe
+    - xdev
+  script:
+    - npm run build

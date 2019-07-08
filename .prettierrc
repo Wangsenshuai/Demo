@@ -1,0 +1,9 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": true,
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
+  "useTabs": false,
+  "tabWidth": 2
+}
