@@ -23,6 +23,8 @@ const store = createStore(
   combineReducers({ counter: counterReducer, user }), //多个store
   applyMiddleware(logger, thunk)
 );
+console.log(aaa);
+
 console.log(store);
 
 export default store;
