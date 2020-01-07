@@ -12,13 +12,13 @@ function Home(props) {
       <ul>
         <li>
           {/* 动态传参 */}
-          <Link to="/detail/vue">vue</Link>
+          <Link to="/Routersample/detail/vue">vue</Link>
         </li>
         <li>
-          <Link to="/detail/react">react</Link>
+          <Link to="/Routersample/detail/react">react</Link>
         </li>
         <li>
-          <Link to="/detail/react">ng</Link>
+          <Link to="/Routersample/detail/react">ng</Link>
         </li>
       </ul>
     </div>
@@ -31,15 +31,15 @@ function About(props) {
       <h3>个人中心</h3>
       {/* 路由嵌套 */}
       <div>
-        <Link to="/about/me">个人信息</Link>
-        <Link to="/about/order">订单查询</Link>
+        <Link to="/Routersample/about/me">个人信息</Link>
+        <Link to="/Routersample/about/order">订单查询</Link>
       </div>
       <Switch>
-        <Route path="/about/me" component={() => <div>Me</div>} />
-        <Route path="/about/order" component={() => <div>Order</div>} />
+        <Route path="/Routersample/about/me" component={() => <div>Me</div>} />
+        <Route path="/Routersample/about/order" component={() => <div>Order</div>} />
 
         {/* 重定向   设置默认项 */}
-        <Redirect to="/about/me" />
+        <Redirect to="/Routersample/about/me" />
       </Switch>
     </div>
   );
@@ -50,6 +50,7 @@ function Detail(props) {
   //1.history:导航指令   命令式导航时
   //2.match:获取参数信息   路由动态参数由此获取
   //3.location:当前url信息
+  console.log(props)
   return (
     <div>
       我是{props.match.params.course}
@@ -65,6 +66,8 @@ const PrivateRoute = connect(state => ({
 }))(({ component: Comp, isLogin, ...rest }) => {
   //认证
   //render ：根据条件动态渲染组件
+  console.log('isLogin',isLogin);
+  
   return (
     <Route
       {...rest}
@@ -74,7 +77,7 @@ const PrivateRoute = connect(state => ({
         ) : (
           <Redirect
             to={{
-              pathname: "/login",
+              pathname: "/Routersample/login",
               state: { redirect: props.location.pathname },
             }}
           />
@@ -113,14 +116,16 @@ function NoMatch({ location }) {
 
 export default class Routersample extends Component {
   render() {
+    console.log(123);
+    
     return (
       <div>
         <BrowserRouter>
           <div>
             {/* 导航链接 */}
             <div>
-              <Link to="/">首页</Link>
-              <Link to="/about">关于</Link>
+              <Link to="/Routersample">首页</Link>
+              <Link to="/Routersample/about">关于</Link>
             </div>
 
             {/* 路由的配置 */}
@@ -128,15 +133,15 @@ export default class Routersample extends Component {
             {/* 用switch组件确保只匹配一个 */}
             <Switch>
               {/* exact保证只显示 / 路由匹配的组件 */}
-              <Route exact path="/" component={Home} />
+              <Route exact path="/Routersample" component={Home} />
 
               {/* 动态传参  类似vue */}
-              <Route exact path="/detail/:course" component={Detail} />
+              <Route exact path="/Routersample/detail/:course" component={Detail} />
               {/* <Route path="/about" component={About} /> */}
-              <PrivateRoute path="/about" component={About} />
+              <PrivateRoute path="/Routersample/about" component={About} />
 
               {/* 登陆 */}
-              <Route path="/login" component={Login} />
+              <Route path="/Routersample/login" component={Login} />
 
               {/* 路由都不匹配 404页面  此路由必须放在最底层 */}
               <Route component={NoMatch} />

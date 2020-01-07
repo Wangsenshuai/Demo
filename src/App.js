@@ -109,7 +109,6 @@ class App extends React.Component {
               <Switch>
                 {routeCom.map((e, index) => (
                   <Route
-                    exact
                     path={"/" + e}
                     component={routeComp[index]}
                     key={e}
@@ -127,6 +126,7 @@ class App extends React.Component {
                 <Route exact path="/KForm" component={KForm} />
                 <Route exact path="/Reduxtest" component={Reduxtest} />
                 <Route exact path="/Routersample" component={Routersample} /> */}
+                
               </Switch>
             </BrowserRouter>
           </Provider>
